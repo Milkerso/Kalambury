@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="420.0" minWidth="600.0" prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.GameController">
+    <left>
+        <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="510.0" BorderPane.alignment="CENTER">
+            <children>
+                <Canvas fx:id="canvas" height="400.0" layoutX="8.0" layoutY="7.0" width="500.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0" />
+            </children>
+        </AnchorPane>
+    </left>
+    <top>
+        <GridPane prefHeight="45.0" prefWidth="789.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="password" text="Haslo:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="time" text="Czas:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Button fx:id="goBack" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" text="Back" />
+                <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" text="Status:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+    </top>
+    <right>
+        <VBox prefHeight="590.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="ready" mnemonicParsing="false" text="Click to be ready!" />
+                <Label prefHeight="45.0" prefWidth="34.0" />
+                <Label text="Uzytkownicy:" />
+                <ListView fx:id="users" prefHeight="112.0" prefWidth="275.0" />
+                <TextArea fx:id="console" prefHeight="259.0" prefWidth="275.0" />
+                <TextField fx:id="input" prefHeight="27.0" prefWidth="236.0" />
+                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="237.0" text="Tools:                 " textAlignment="CENTER" />
+                <HBox prefHeight="50.0" prefWidth="243.0">
+                    <children>
+                        <Button fx:id="marker" mnemonicParsing="false" prefHeight="27.0" prefWidth="58.0" text="Marker">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Button>
+                  <Button fx:id="cleaner" mnemonicParsing="false" text="Wyczysc ekran" />
+                        <Button fx:id="eraser" mnemonicParsing="false" prefHeight="27.0" prefWidth="55.0" text="Gumka">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </right>
+   <bottom>
+      <HBox prefHeight="46.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="idlabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="164.0" text="ID:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="score" alignment="CENTER" prefHeight="46.0" prefWidth="167.0" text="Punkty:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
